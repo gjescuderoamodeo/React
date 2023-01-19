@@ -3,9 +3,8 @@ import './App.css';
 import React, {Component} from 'react';
 import HelloComponents from './components/HelloComponent'
 import InputComponents from './components/InputComponent'
-import { Tiempo } from './components/Reloj';
-import { Reloj2 } from './components/Reloj2';
 import { Reloj3 } from './components/Reloj3';
+import { Toggle } from './components/Toggle';
 import ReactDOM from 'react-dom/client';
 
 
@@ -30,14 +29,12 @@ class App extends Component{
   return (
     <div className="App">
         <HelloComponents nombre={this.state.name}></HelloComponents>
-        <InputComponents name={this.state.name} cambiarNombre={this.changeName}></InputComponents> 
-        <Tiempo tiempo={this.hora}></Tiempo>       
-        <Reloj2 />
+        <InputComponents name={this.state.name} cambiarNombre={this.changeName}></InputComponents>     
         <Reloj3/>
+        <Toggle />
     </div>
   );
 }
-
 
 }
 
