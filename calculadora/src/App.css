@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+
+
+.card {
+  width: 24%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%)
+}
+.btn-group {
+  width: -moz-available;
+}
