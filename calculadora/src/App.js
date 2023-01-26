@@ -2,6 +2,9 @@ import logo from './logo.svg';
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import {
+  atan2, chain, derivative, e, evaluate, log, pi, pow, round, sqrt
+} from 'mathjs'
 
 function App() {
   const [resultado, setResultado] = useState('');
@@ -16,8 +19,8 @@ function App() {
 
   const handleEqual = () => {
     try {
-      console.log(eval(resultado))
-      setResultado(eval(resultado))      
+      console.log(evaluate(resultado))
+      setResultado(evaluate(resultado))      
     } catch (e) {
       setResultado('Error')
     }
