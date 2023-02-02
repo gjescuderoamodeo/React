@@ -1,0 +1,34 @@
+.Dado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    width: 300px;
+    margin: 0 auto;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: white;
+    margin-top: 1.5rem;
+  }
+  
+  .Dado-numero {
+    font-size: 72px;
+    margin-bottom: 20px;
+  }
+  
+  .Dado-button {
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 10px;
+    border: none;
+    background-color: green;
+    color: white;
+    margin-top: 2rem;
+  }
+  
+  .Dado-button:hover {
+    cursor: pointer;
+    background-color: lightgreen;
+  }
+  
