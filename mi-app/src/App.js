@@ -6,6 +6,7 @@ import InputComponents from './components/InputComponent'
 import { Reloj3 } from './components/Reloj3';
 import { Toggle } from './components/Toggle';
 import ReactDOM from 'react-dom/client';
+import Hook from './components/Hook'
 
 
 class App extends Component{
@@ -32,6 +33,7 @@ class App extends Component{
         <InputComponents name={this.state.name} cambiarNombre={this.changeName}></InputComponents>     
         <Reloj3/>
         <Toggle />
+        <Hook/>
     </div>
   );
 }
