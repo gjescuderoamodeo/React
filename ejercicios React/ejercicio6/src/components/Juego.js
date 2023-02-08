@@ -57,25 +57,30 @@ const DiceGame = () => {
           ))}
           {players.every((player) => player.score >= 5) && (
             <div>
-              <h2>Final Results:</h2>
-              {const sortedPlayers = [...players].sort((a, b) => b.score - a.score);
-              sortedPlayers.map((player, index) => (
-                <p key={index}>
-                  {index + 1}. {player.name}: {player.score}
-                </p>
-              ))}
+              <h2>Resultado Final:</h2>
+              
             </div>
           )}
         </div>
       ) : (
         <div>
-          <h2>Enter number of players:</h2>
+          <h2>Numero Jugadores:</h2>
           <input type="number" onChange={(e) => setNumPlayers(e.target.value)} />
-          <button onClick={() => startGame()}>Start Game</button>
+          <button onClick={() => startGame()}>Empezar juego</button>
         </div>
       )}
     </div>
   );
 };
+
+/* 
+{sortedPlayers = [...players].sort((a, b) => b.score - a.score);
+              sortedPlayers.map((player, index) => (
+                <p key={index}>
+                  {index + 1}. {player.name}: {player.score}
+                </p>
+              ))&rbrace;
+
+*/
 
 export default DiceGame;
