@@ -7,6 +7,7 @@ import { Reloj3 } from './components/Reloj3';
 import { Toggle } from './components/Toggle';
 import ReactDOM from 'react-dom/client';
 import Hook from './components/Hook'
+import Counter from './components/Counter';
 
 
 class App extends Component{
