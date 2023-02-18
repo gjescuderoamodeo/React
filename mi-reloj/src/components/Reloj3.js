@@ -50,5 +50,6 @@ export function Reloj3() {
     );
   }
 
-
+  //exporta por defecto esta función
+  export default Reloj3;
 

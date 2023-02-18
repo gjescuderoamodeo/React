@@ -1,6 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
-import { Reloj3 } from './components/Reloj3';
+import Reloj3 from './components/Reloj3';
+import Contador from './components/Test';
+
 import ReactDOM from 'react-dom/client';
 import { Component } from 'react';
 
@@ -9,6 +11,7 @@ function App() {
   return (
     <div className="App">
       <Reloj3 />
+      <Contador/>
     </div>
   );
 }
