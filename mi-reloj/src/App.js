@@ -4,7 +4,19 @@ import { Reloj3 } from './components/Reloj3';
 import ReactDOM from 'react-dom/client';
 import { Component } from 'react';
 
-class App extends Component {
+//version con funcion
+function App() {
+  return (
+    <div className="App">
+      <Reloj3 />
+    </div>
+  );
+}
+
+export default App;
+
+
+/*class App extends Component {
   render(){
     return(
       <div className="App">
@@ -16,4 +28,4 @@ class App extends Component {
   
 }
 
-export default App;
+export default App;*/
