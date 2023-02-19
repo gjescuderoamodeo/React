@@ -6,7 +6,9 @@ function App() {
 
   //Crear una aplicación con dos elementos tipo text en la que los valores introducidos en uno
  //de ellos se reflejen automáticamente en el otro  
- const [text, setText] = useState('');
+ const [text, setText] = useState(''); 
+ //<-La función useState recibe como argumento el valor inicial del estado 
+ //y devuelve un array con dos elementos: la variable de estado actual y una función para actualizarla.
 
   const handleTextChange = (event) => {
     setText(event.target.value);
