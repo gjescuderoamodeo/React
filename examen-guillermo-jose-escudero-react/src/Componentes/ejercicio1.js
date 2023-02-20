@@ -8,28 +8,28 @@
 
 import React, { useState, useRef } from 'react';
 
-function Temporizador() {
+function Ejercicio1() {
   const [minutos, setMinutos] = useState(0);
   const [segundos, setSegundos] = useState(0);
   const [tiempoRestante, setTiempoRestante] = useState(null);
   const intervalRef = useRef(null);
 
-  // Función para manejar cambios en el campo de texto de minutos
+  //función para manejar cambios en el campo de texto de minutos
   const handleMinutosChange = event => {
     setMinutos(event.target.value);
   };
 
-  // Función para manejar cambios en el campo de texto de segundos
+  //función para manejar cambios en el campo de texto de segundos
   const handleSegundosChange = event => {
     setSegundos(event.target.value);
   };
 
-  // Función para iniciar el temporizador
+  //función para iniciar el temporizador
   const iniciarTemporizador = () => {
     const tiempoTotal = (minutos * 60) + segundos;
     setTiempoRestante(tiempoTotal);
 
-    // Establecer un intervalo para reducir el tiempo restante en 1 segundo
+    //establecer un intervalo para reducir el tiempo restante en 1 segundo
     intervalRef.current = setInterval(() => {
       setTiempoRestante(prevTiempoRestante => {
         if (prevTiempoRestante === 0) {
@@ -42,13 +42,13 @@ function Temporizador() {
     }, 1000);
   };
 
-  // Función para detener el temporizador
+  //función para detener el temporizador
   const detenerTemporizador = () => {
     clearInterval(intervalRef.current);
     setTiempoRestante(null);
   };
 
-  // Función para formatear el tiempo restante en minutos y segundos
+  //función para formatear el tiempo restante en minutos y segundos
   const formatoTiempo = tiempo => {
     const minutos = Math.floor(tiempo / 60);
     const segundos = tiempo % 60;
@@ -58,12 +58,9 @@ function Temporizador() {
   return (
     <div>
       <div>
-        <label htmlFor="minutos">Minutos:</label>
-        <input type="number" id="minutos" value={minutos} onChange={handleMinutosChange} />
-      </div>
-      <div>
-        <label htmlFor="segundos">Segundos:</label>
-        <input type="number" id="segundos" value={segundos} onChange={handleSegundosChange} />
+        <input type="number" id="minutos" size={3} value={minutos} onChange={handleMinutosChange} />
+        <b className='b'>:</b>
+        <input type="number" id="segundos" size={3} value={segundos} onChange={handleSegundosChange} />
       </div>
       <div>
         <button onClick={iniciarTemporizador}>Iniciar</button>
@@ -79,7 +76,7 @@ function Temporizador() {
   );
 }
 
-export default Temporizador;
+export default Ejercicio1;
 
 
 
